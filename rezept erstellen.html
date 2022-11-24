@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -8,6 +9,23 @@
     <link rel="icon" type="image/x-icon" href="6044467.png">
     <link rel="stylesheet" href="home.css"/>
     <link rel="stylesheet" href="https://use.typekit.net/ajm5wpn.css">
+
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+      </script>
+
   </head>
 
   <body>
@@ -18,7 +36,7 @@
           <nav>
             <ul>
               <a href="home.html">Home</a>
-              <a href="rezept erstellen.html">Rezept erstellen</a>
+              <a aria-current="rezept erstellen.html">Rezept erstellen</a>
               <a href="übersicht rezepte süß.html">süß</a>
               <a href="übersicht rezepte herzhaft.html">herzhaft</a>
             </ul>
@@ -28,33 +46,26 @@
 
   <main>
 
-    
-<img src="sweet-potato-g1ef0d3f3b_1920.jpg" alt="Süßkartoffelscheiben mit Frischkäse"style="width:450px;height:300px;>
-    <section class="zutaten">
-    <li> <a>1 mittelgroße Süßkartoffel</a> </li>
-    <li> <a>5El Oliveöl</a> </li>
-    <li> <a>Salz</a> </li>
-    <li> <a>Pfeffer</a> </li>
-    <li> <a>frische Petersilie</a> </li>
-    <li> <a>1 Limette</a> </li>
-    <li> <a>50g Frischkäse</a> </li>
-    <li> <a>2 Tomaten</a> </li>
-    <li> <a>Oliven nach Belieben</a> </li>
-  </section>
+    <form name="form1" id="form1" action="/action_page.php">
 
-  <div class="chat-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-  
-      <label for="kommentar"><b>Was hälst du von diesem Rezept? Teile deine Ideen gerne mit den anderen <3 </b></label>
-      <textarea placeholder="Was hälst du von diesem Rezept.." name="kommentar" required></textarea>
-      <button type="submit" class="btn">Senden</button>
-    
+      Rezeptkategorie: <select name="Rezeptkategorie" id="Rezeptkategorie">
+        <option value="" selected="selected">Süßes Rezept</option>
+        <option value="" selected="selected">Herzhaftes Rezept</option>
+      </select>
+      <br><br>
+
     </form>
-  </div>
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="vegetarisch stern.png" draggable="true" ondragstart="drag(event)" width="5px" height="5px";>
+    </section>
+  
+ 
+  </body>
 
 </main>
-
-</body>
 
   <footer>
           <div class="navbar">

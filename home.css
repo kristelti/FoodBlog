@@ -1,0 +1,251 @@
+
+header {
+    background: rgb(245, 212, 150);
+    font-family: brevia,sans-serif;
+    font-weight: 700;
+    font-style: italic;  
+    font-size: large;
+    text-align: center; 
+    padding-inline-start: 10px;
+    padding: .2em 1em;
+    display: flex;
+    
+}
+
+#logo {
+   padding: 1em;
+   color: rgba(77, 50, 7, 0.827);
+}
+
+#suchleiste {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 450px;
+    width: 300px;
+}
+ 
+  .menuicon {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 550px;
+    padding: 10px;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgba(77, 50, 7, 0.827);
+    margin: 6px 0;
+    transition: 0.4s;
+    
+  }
+
+
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: rgb(241, 213, 156);
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  /*  navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #534938;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+   color:#726060
+  }
+  
+  
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+
+
+a {
+    font-family: brevia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: rgba(8, 49, 50, 0.636);
+    padding: 0px 20px 0px 10px;
+    border-right: 2px solid white;
+}
+.zutaten {
+    margin: 40px;
+}
+
+    
+    .bg-img {
+       
+        background-image: url("cereals-gb277009d9_1920.jpg");
+      
+        min-height: 800px;
+      
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    
+        position: relative;
+      }
+      
+      .container {
+        position: absolute;
+        margin: 40px;
+        width: auto;
+      }
+      
+    
+      .topnav {
+        overflow: hidden;
+        background-color: rgb(190, 156, 76);
+      }
+      
+    
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 20px 30px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      
+      .topnav a:hover {
+        background-color: rgb(228, 210, 106);
+        color: black;
+      }
+      
+      .navbar {
+        background-color: rgb(255, 255, 255);
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbar a {
+        float: left;
+        display: block;
+        color: #726060;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      img {
+        width:400px;
+        height:250px;
+        float: left;
+        margin: 10px;
+      }
+
+
+      /* Button used to open the chat form - fixed at the bottom of the page */
+      .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+      }
+      
+      /* The popup chat - hidden by default */
+      .form-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+      }
+      
+      /* Add styles to the form container */
+      .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+      }
+      
+      /* Full-width textarea */
+      .form-container textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 200px;
+      }
+      
+      /* When the textarea gets focus, do something */
+      .form-container textarea:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      
+      /* Set a style for the submit/login button */
+      .form-container .btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+      }
+      
+      /* Add a red background color to the cancel button */
+      .form-container .cancel {
+        background-color: red;
+      }
+      
+      /* Add some hover effects to buttons */
+      .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+      }  
+      
+/*footer*/
+      .navbar a:hover {
+        background-color: rgb(228, 185, 106);
+        color: rgb(246, 244, 244);
+      }
+      
+      /* Add a color to the active/current link */
+      .navbar a.active {
+        background-color:rgb(245, 212, 150);
+        color: white;
+      }
+    
+    
